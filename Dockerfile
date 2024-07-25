@@ -6,6 +6,7 @@ ENV ZEPHYR_TOOLCHAIN_VARIANT=zephyr
 # install rustup
 RUN wget -O - https://sh.rustup.rs | sh -s -- --default-toolchain stable -y
 ENV PATH="/root/.cargo/bin:${PATH}"
+RUN rustup default stable
 
 # install rust target for nrf5340
 RUN rustup target add thumbv8m.main-none-eabihf
