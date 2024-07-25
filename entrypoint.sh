@@ -1,6 +1,6 @@
 #!/bin/sh
 
-env
+export HOME=/root
 
 cd $3
 
