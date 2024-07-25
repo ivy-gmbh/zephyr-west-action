@@ -11,9 +11,12 @@ inputs:
   command-args:  # id of input
     description: 'Extra arguments for the west command'
     required: false
+  working-directory: # id of input
+    description: "Working directory for west command"
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.command }}
     - ${{ inputs.command-args }}
+    - ${{ inputs.working-directory }}
