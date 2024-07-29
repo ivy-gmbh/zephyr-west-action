@@ -1,6 +1,7 @@
 #!/bin/sh
 
-export HOME=/root
+cp -r /root/.cargo  $HOME/
+cp -r /root/.rustup $HOME/
 
 cd $3
 
